@@ -53,8 +53,6 @@ echo 'configuration complete, type make to build.'
 echo 'generating file docker-compose.service'
 echo "[Unit]" > docker-compose.service
 echo "Description=%i service of $app with docker-compose" >> docker-compose.service
-#echo "Requires=docker.service" >> docker-compose.service
-#echo "After=docker.service" >> docker-compose.service
 echo "" >> docker-compose.service
 echo "[Service]" >> docker-compose.service
 echo "Restart=always" >> docker-compose.service
