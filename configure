@@ -60,7 +60,6 @@ echo "WorkingDirectory=$prefix" >> docker-compose.service
 echo "# Remove old containers, pull images and build containers" >> docker-compose.service
 echo "ExecStartPre=$(which docker-compose) -p $app down -v" >> docker-compose.service
 echo "ExecStartPre=$(which docker-compose) -p $app pull %i" >> docker-compose.service
-echo "ExecStartPre=$(which docker-compose) -p $app build --force-rm %i" >> docker-compose.service
 echo "# Compose up" >> docker-compose.service
 echo "ExecStart=$(which docker-compose) -p $app up --no-build %i" >> docker-compose.service
 echo "# Compose down and restart" >> docker-compose.service
